@@ -1,0 +1,223 @@
+
+body {
+    width: 1200px; 
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace
+}
+button { display: none;}
+li { display: inline;}
+.topBar {
+   display: flex;
+   justify-content: space-between;
+}
+.profilePic {align-items: center; justify-self: center;}
+
+.topNav {
+   align-self: center;
+   justify-self: center;
+   letter-spacing: 1.5px;
+}
+.topNav span { padding: 0px 5px;}
+.topNav span:hover { 
+   color: rgb(251, 204, 204);
+}
+.topBar img {
+   width: 40px;
+   height: 40px;
+   border: 0px solid black;
+   border-radius: 50%;
+   background-color: darkslategrey; 
+}
+.aboutUs { font-family: Georgia, 'Times New Roman', Times, serif; padding-top: 20px;}
+.flexTwo{
+   display: flex;
+   gap: 20px;
+   justify-content: space-evenly;
+   margin-top: 30px;
+}
+.flexTwo img {
+   width: 360px;
+   height: 200px;
+   border-radius: 5px;
+}
+.flexTwo p {width: 360px; text-align: justify; color: rgb(70, 70, 70);}
+.ourTeam {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 1fr);
+   grid-template-rows: repeat(auto-fill, 1fr);
+
+}
+h2,h1 { text-align: center; font-size: xx-large; font-family: Georgia, 'Times New Roman', Times, serif;}
+
+
+h5 { max-width: 600px; text-align: center; margin: auto;
+margin-bottom: 20px; font-family: Georgia, 'Times New Roman', Times, serif }
+.flexThree {
+   display: flex;
+   gap: 20px;
+   column-gap: 40px;
+   justify-content: center;
+   align-items: center;
+   grid-template
+   grid-template-rows: 1 / 2;
+   padding-bottom: 40px; 
+}
+.flexThree img {
+   width: 180px;
+   height: 160px;
+   border-radius: 3px;
+}
+.flexThree h3 {margin: auto; margin-bottom: 5px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif }
+
+footer {
+   background-color: #282828;
+   color: #777;
+   width: 1200px;
+   border: 0px solid black;
+}
+.footerInfo {
+   display: flex;
+   max-width: 800px;
+   justify-content: space-between;
+   padding: 30px 140px;
+   margin: auto;
+   text-align: center;
+   column-gap: 100px;
+   letter-spacing: 1.5px;
+}
+.numbers p { width: 180px;}
+.footerIcons { 
+   display: flex;
+   column-gap: 10px; 
+   text-align: center; 
+   letter-spacing: 3px; 
+   justify-content: center; 
+   margin-top: 40px;
+   padding-top: 30px;
+   padding-bottom: 10px;
+   font-size: large;
+   color: rgb(186, 183, 183);
+}
+.footerIcons :hover {
+   color: white;
+}
+.copyRight, .copyRight p { text-align: center; margin: auto; color: rgb(70, 70, 70)}
+
+@media all and (max-width: 1024px) {
+   body {
+      max-width: 1024px;
+      margin: auto;
+      font-size: large;
+   }
+   .topBar { max-width: 1024px; justify-content: center; gap: 500px;}
+   .menu { perspective: 800px;}
+   .topNav ul {
+      max-height: 0;
+      overflow: hidden;
+      transform: translateX(90deg);
+      transition: all 0.5s; 
+   }
+   [aria-controls="menu-list"] {
+      display: block;
+      margin-bottom: 10px;
+   }
+   [aria-expanded="true"] ~ ul {
+      display: grid;
+      max-height: 400px;
+      transform: rotateX(0);
+   }
+   [aria-expanded="false"] .close {
+      display: none;
+   }
+   [aria-expanded="true"] .close {
+      display: inline-block;
+   }
+   [aria-expanded="true"] .open {
+      display: none;
+   }
+   .aboutUs {
+      max-width: 1024px;
+   }
+   .flexTwo {
+      display: grid;
+      justify-content: start;
+      margin-left: 20px;
+      width: 1024px;
+   }
+   .flexTwo p {
+      width: 700px;
+      text-align: left;
+      font-size: medium;
+   }
+   .one { display: flex; gap: 20px;}
+   .one img { width: 240px; height: 200px;}
+   .two { display: flex; gap: 20px;}
+   .two img { width: 240px; height: 200px;}
+   .three { display: flex;gap: 20px;}
+   .three img { width: 240px; height: 200px;}
+
+   .flexThree {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      max-width: 1024px;
+      justify-content: center;
+      padding-left: 100px;
+      gap: 20px;
+      row-gap: 50px;
+   }
+   .picOne { justify-self: center;}
+   .picTwo { justify-self: start;}
+   .picThree { justify-self: center;}
+   .picFour { justify-self: start;}
+   h1, h2 { text-align: center;}
+   .arrows { display: none;}
+   h5 { font-size: small; max-width: 500px; margin-bottom: 40px;}
+
+   footer { max-width: 1024px; text-align: center;}
+   .footerInfo { justify-content: center; align-items: center; font-size: small;}
+   footer p { font-size: small;}
+   .copyRight { justify-content: center; align-items: center;}
+}
+
+@media all and (max-width: 767px) {
+   body{ max-width: 767px;}
+   .topBar {
+      max-width: 767px;
+      font-size: xx-large;
+      align-items: center;
+      justify-content: center;
+      gap: 200px;
+   }
+   .topNav {font-size: large;}
+   .aboutUs{
+      text-align: center;
+      align-items: center;
+   }
+   h1, h2 { font-size: x-large}
+   h5, h4 { font-size: small; max-width: 400px;}
+   .flexTwo { display: grid; margin-left: 100px;}
+   .flexTwo p, h4 { max-width: 550px; text-align: center;}
+   .one { display: grid;}
+   .two { display: grid;}
+   .three { display: grid;}
+   .one img, .two img, .three img { width: 550px; height: 250px; align-items: center;}
+
+.flexThree {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+   }
+   .flexThree img { width: 400px; height: 300px;}
+   .picOne { justify-self: center; font-size: x-large}
+   .picTwo { justify-self: center; font-size: x-large}
+   .picThree { justify-self: center; font-size: x-large}
+   .picFour { justify-self: center; font-size: x-large}
+   footer { max-width: 768px;}
+   footer p { font-size: xx-small; max-width: auto;}
+   footer h5 {font-size: large;}
+   .footerIcons { font-size: medium;}
+   .copyRight { text-align: center; align-items: center; justify-content: center;}
